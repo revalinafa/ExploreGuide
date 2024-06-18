@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Pemesanan Pendakian</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 50%;
+        margin: auto;
+        overflow: hidden;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin-top: 50px;
+      }
+      h1 {
+        text-align: center;
+        color: #4b0082;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      label {
+        margin: 10px 0 5px;
+        color: #333;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      select,
+      textarea {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+      textarea {
+        resize: vertical;
+        height: 100px;
+      }
+      button {
+        background-color: #4b0082;
+        color: #fff;
+        border: none;
+        padding: 15px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #3a0069;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Form Pemesanan Pendakian</h1>
+      <form>
+        <label for="name">Nama Lengkap</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Nomor Telepon</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="mountain">Gunung yang Ingin Didaki</label>
+        <select id="mountain" name="mountain" required>
+          <option value="slamet">Gunung Slamet</option>
+          <option value="merbabu">Gunung Merbabu</option>
+          <option value="sumbing">Gunung Sumbing</option>
+          <option value="lawu">Gunung Lawu</option>
+        </select>
+
+        <label for="date">Tanggal Pendakian</label>
+        <input type="date" id="date" name="date" required />
+
+        <label for="participants">Jumlah Peserta</label>
+        <input type="number" id="participants" name="participants" required />
+
+        <label for="message">Pesan Tambahan</label>
+        <textarea id="message" name="message"></textarea>
+
+        <button type="submit">Pesan Sekarang</button>
+      </form>
+    </div>
+  </body>
+</html>
